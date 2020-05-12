@@ -1,0 +1,2 @@
+- button 宽度设置无效问题？
+  - <button style="width: 100%">hello</button>
