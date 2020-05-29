@@ -3,7 +3,7 @@
 - 组件属性、控制属性、关键字需在双引号内
   ```html
   <view id="item-{{id}}"></view>
-  <view wx;If="{{condition}}"></view>
+  <view wx:If="{{condition}}"></view>
   <checkbox checked="{{false}}"></checkbox>
   ```
 - 可在{{}}内进行简单运算
