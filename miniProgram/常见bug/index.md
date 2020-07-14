@@ -26,3 +26,20 @@
     <textarea wx:else class="textarea_class" value="{{commonParams.patientSymptom}}" placeholder="请简要介绍相关情况，便于护士了解症状，感谢您的配合" auto-height bindblur="bindPatientSymptoon" />
   </view>
 ```
+
+## rich-text 中设置图片大小问题
+将富文本中的html中<img /> 设置width: 100%;
+```js
+    switchContent(data) {
+      let swContent = data.content.replace(/<img/gi, "<img style='width:100%;height:auto!important;max-height:100%;width:100%;'");
+      return swContent;
+    }
+```
+## 视频组件
+- video 与 swiper 一起使用
+  1. 滑动时video pause第二次后不能暂停？
+    pause定时器延迟
+  2. 滑动时会改变video的进度条？
+    enable-progress-gesture => false [关闭控制进度的手势]
+
+## 音频组件
