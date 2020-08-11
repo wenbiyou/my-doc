@@ -27,6 +27,9 @@
   </view>
 ```
 
+## textarea 滚动错位
+
+
 ## rich-text 中设置图片大小问题
 将富文本中的html中<img /> 设置width: 100%;
 ```js
@@ -42,4 +45,8 @@
   2. 滑动时会改变video的进度条？
     enable-progress-gesture => false [关闭控制进度的手势]
 
-## 音频组件
+
+## 获取access_token
+  https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
+## 获取小程序提审次数
+  https://api.weixin.qq.com/wxa/queryquota?access_token=xx
