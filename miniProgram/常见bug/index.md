@@ -1,3 +1,19 @@
+## 如何在视图层直接调用方法？
+- 可使用wxs模块
+```js
+// 如处理页面显示地址
+<view> {{loadAddress.adjustAddress(address)}} </view>
+
+<wxs module="loadAddress">
+function adjustAddress(address) {
+  return address.pro + address.city + address.area;
+}
+
+module.exports = adjustAddress;
+</wxs>
+```
+
+
 ## button 宽度设置无效问题？
   <button style="width: 100%">hello</button>
 
