@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let bar = {
+    //   myName: "hello",
+    //   test1: 1
+    // }
+    // function foo() {
+    //   this.myName = "hi"
+    // }
+    // foo.call(bar)
+    // console.log("bar", bar)
+    // console.log("myName", myName)
+
+
+var myObj = {
+  name : " 极客时间 ",
+  showThis: function(){
+    this.name = "极客邦"
+    console.log(this) // myObj
+    function bar() {
+      console.log('bar', this) // window
+    }
+    bar()
+  }
+}
+// myObj.showThis() // 类似 myObj.showThis.call(myObj)
+
+// var testMyObj = myObj;
+// console.log('testMyObj', testMyObj)
+
+
+var myObj2 = {
+  name : " 极客时间 ",
+  showThis: function(){
+    console.log(this) // myObj
+    let self = this
+    function bar() {
+      self.name = "极客邦"
+    }
+    bar()
+  }
+}
+
+myObj2.showThis()
+console.log(myObj2.name)  // 极客邦
+console.log('window', window.name) //
+console.log('window', window.myObj2.name) // 极客邦
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

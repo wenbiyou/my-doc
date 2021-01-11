@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // {
+    //   function onResolve(response) {
+    //     console.log(response)
+    //   }
+    //   function onReject(error) {
+    //     console.log(error)
+    //   }
+
+    //   let xhr = new XMLHttpRequest()
+    //   xhr.ontimeout = function(e) {
+    //     onReject(e)
+    //   }
+    //   xhr.onerror = function(e) {
+    //     onReject(e)
+    //   }
+    //   xhr.onreadystatechange = function() {
+    //     onResolve(xhr.response)
+    //   }
+
+    //   let URL = 'https://time.geekbang.com'
+    //   xhr.open('Get', URL, true)
+
+    //   xhr.timeout = 3000
+    //   xhr.responseType = 'text'
+    //   xhr.setRequestHeader('X_TEST', 'time.geekbang')
+
+    //   xhr.send()
+    // }
+
+    // {
+    //   function XFecth(resolve, reject) {
+    //     let xhr = new XMLHttpRequest()
+    //     xhr.ontimeout = function(e) {
+    //       reject(e)
+    //     }
+    //     xhr.onerror = function(e) {
+    //       reject(e)
+    //     }
+    //     xhr.onreadystatechange = function() {
+    //       resolve(xhr.response)
+    //     }
+
+    //     let URL = 'https://time.geekbang.com'
+    //     xhr.open('Get', URL, true)
+
+    //     xhr.timeout = 3000
+    //     xhr.responseType = 'text'
+    //     xhr.setRequestHeader('X_TEST', 'time.geekbang')
+
+    //     xhr.send()
+    //   }
+    // }
+
+    {
+      function executor(resolve, reject) {
+        resolve(100)
+      }
+      let demo = new Promise(executor)
+
+      function onResolve(value) {
+        console.log('onResolve', value)
+      }
+      demo.then(onResolve)
+      // demo.then(onResolve)
+    }
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>
