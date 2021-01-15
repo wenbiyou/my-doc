@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生成器</title>
+</head>
+<body>
+
+  <script>
+
+    function* genDemo() {
+      yield 'generator 1'
+      yield 'generator 2'
+      yield 'generator 3'
+      yield 'generator 4'
+      yield 'generator 5'
+    }
+
+
+    function* foo() {
+      let res1 = yield fetch('https;//www.geekbang.org')
+      console.log('res1', res1)
+      let res2 = yield fetch('https;//www.geekbang.org/test')
+      console.log('res1', res2)
+    }
+
+    console.log(foo().next().value)
+
+  </script>
+
+</body>
+</html>
