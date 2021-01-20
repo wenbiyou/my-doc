@@ -45,7 +45,6 @@ module.exports = adjustAddress;
 
 ## textarea 滚动错位
 
-
 ## rich-text 中设置图片大小问题
 将富文本中的html中<img /> 设置width: 100%;
 ```js
