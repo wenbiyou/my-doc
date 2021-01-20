@@ -14,11 +14,9 @@
   <body>
     <canvas width="300" height="300"></canvas>
     <script>
-      main()
 
       var squareRotation = 0.0;
-
-      function main() {
+      {
         let canvas = document.querySelector("canvas")
         let gl = canvas.getContext("webgl")
 
@@ -73,8 +71,10 @@
 
           requestAnimationFrame(render)
         }
+
         requestAnimationFrame(render)
       }
+
 
       function initBuffers(gl) {
 

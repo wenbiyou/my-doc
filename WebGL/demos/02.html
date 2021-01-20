@@ -14,12 +14,13 @@
   <body>
     <canvas width="300" height="300"></canvas>
     <script>
-      main()
 
-      function main() {
+      {
+        // 创建WebGL上下文
         let canvas = document.querySelector("canvas")
         let gl = canvas.getContext("webgl")
 
+        // 顶点着色器、片元着色器
         const vsSource = `
         attribute vec4 aVertexPosition;
 
@@ -37,7 +38,7 @@
           gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
         }
       `
-
+        // 创建WebGLProgram对象
         const shaderProgram = initShaderProgram(gl, vsSource, fsSource)
 
         const programInfo = {
@@ -51,6 +52,7 @@
           },
         }
 
+        // 将数据存入缓冲区
         const buffers = initBuffers(gl)
 
         drawScene(gl, programInfo, buffers)
@@ -105,7 +107,9 @@
 
         mat4.translate(modelViewMatrix, modelViewMatrix, [-0.0, 0.0, -6.0])
 
+
         {
+          // 从缓冲区读取数据
           const numComponents = 2
           const type = gl.FLOAT
           const normalize = false
@@ -121,8 +125,6 @@
             offset)
           gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition)
         }
-
-
 
         gl.useProgram(programInfo.program)
 
@@ -143,6 +145,7 @@
         }
 
       }
+
 
       function initShaderProgram(gl, vsSource, fsSource) {
         const vertexShader = loadShader(gl, gl.VERTEX_SHADER, vsSource)
