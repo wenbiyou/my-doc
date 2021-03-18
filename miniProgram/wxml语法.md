@@ -31,7 +31,7 @@
   ```
 - wx:key 指定列表项目的唯一标识符
   * 字符串，item的某个唯一属性且不能动态改变
-  * 保留关键字 *this 代表for循环中item本身，这种表示item本身时一个唯一的字符串或数字
+  * 保留关键字 *this 代表for循环中item本身，这种表示item本身是一个唯一的字符串或数字
 - 花括号和引号之间如有空格，将最终被解析为字符串
 ```html
 <view wx:for="{{[1, 2, 3]}} ">{{item}}</view>
@@ -55,7 +55,7 @@
   * hidden 有更高的初始渲染消耗，频繁切换使用hidden好
 
 ## 模板
-- 在模块中定义代码片段，然后再不同的地方调用
+- 在模块中定义代码片段，然后在不同的地方调用
 - 定义模板 [name]
   ```html
   <template name="msgItem">
@@ -76,7 +76,7 @@
 ## 引用
 - wxml 提供了两种文件引用方式 import 和 include
 - import
-  * 可在改文件中使用目标问搭建定义的template
+  * 可在该文件中使用目标文件定义的template
   * import有作用域的概念
 - include
   * 可将目标文件除了 <template /> <wxs /> 外的整个代码引入
