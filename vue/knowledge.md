@@ -74,7 +74,8 @@ Vue的异步队列先尝试使用Promise.then(), MutationObserver,SetImmediate,�
 - Template、JSX都是语法糖，实际都被编译成了createElement渲染函数
 
 ## Vue组件是如何通信
-- props + $emit
+- props
+- $emit()向父组件抛出事件
 - Vuex
 - 访问元素&组件
   - 访问子组件实例 $refs
