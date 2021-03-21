@@ -1,5 +1,5 @@
 ## 是什么
-- axios是对原生XMLHttpRequest的封装，是用Promise实现的版本
+- axios是基于Promise对原生XMLHttpRequest的封装
 
 ## 特点
 - 从浏览器创建XMLHttpRequest

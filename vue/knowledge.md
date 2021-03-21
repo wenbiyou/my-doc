@@ -24,7 +24,7 @@
   - bug比较难调试，可能是model的问题，也可能是view的问题
   - 项目比较大时，数据绑定耗内存
 
-- 实现方式：数据劫持，通过defineProperty(),Vue3使用proxy实现数据劫持
+- 实现方式：数据劫持，通过Object.defineProperty(),Vue3使用proxy实现数据劫持
 (react使用脏值检查实现双向数据绑定)
 
 - Vue没有完全遵循MVVM模型，如$refs属性，违背了Vue数据驱动的思想
