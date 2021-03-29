@@ -23,3 +23,30 @@
 - 轻量是函数组件的基因，这可能使它不能够很好的消化复杂
 
 ## Hook的本质是链表
+
+
+## 简介
+- 没有破坏性改动
+  - 完全可选
+  - 100% 向后兼容
+  - 现在可用
+  - 没有计划从React中移除class
+- 动机
+  - Hook 使你无需修改组件结构的情况下复用状态逻辑
+  - Hook 将组件中相互关联的部分拆分成更小的函数，而非强制按照生命周期划分
+  - Hook 使你在非class的情况下提供更多的react特性
+- Hook 规则
+  - 只在最顶层使用Hook
+  - 只在React函数中调用Hook
+- Hook Api
+  - useState
+  - useEffect
+  - useContext
+
+  - useReducer
+  - useCallback
+  - useRef
+  - useMemo
+  - useLayoutEffect
+  - useDebugValue
+

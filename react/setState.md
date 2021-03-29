@@ -24,3 +24,13 @@ isBatchingUpdates
 ## setState的表现会因调用场景的的不同从而表现不同
 - 在react钩子函数及合成事件中，表现为异步
 - 在setTimeout、setInterval等函数，包括DOM原生事件中，它表现为同步
+
+
+## 使用
+```js
+- 只能在construction初始化时 this.state = {count: 1}
+- 其他地方只能使用 setState({count: 2})
+setState((state, props) => ({
+  count: state.count + props.nums
+}))
+```

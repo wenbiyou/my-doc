@@ -11,11 +11,11 @@
 - vue-cli
 
 ## MVvm模型
-- model 模型（数据层）
+- model 模型（数据层）[data, props]
   - 仅关注数据
-- view  视图（用户操作界面）
+- view  视图（用户操作界面）[template、style]
   - viewModel对model更新，会通过数据绑定更新视图
-- ViewModel 视图模型（绑定器）
+- ViewModel 视图模型（绑定器）[继承自Vue类的实例属性]
   - viewModel中的双向数据绑定，当model发生改变，ViewModel会自动更新，从而改变视图
 
 - 解决问题：简化了界面与业务的依赖，解决了数据频繁更新
@@ -31,8 +31,8 @@
 
 
 ## 响应式原理
-- Vue会遍历对象的属性，使用Object.defineProperty将property转为getter/setter,Vue能在内部追踪依赖。
-- 每个Vue实例都对应一个Watcher实例，将这些property记录为依赖，当依赖项的setter触发时，会通知wather,从而使关联组件重新渲染
+- Vue会遍历data对象的属性，使用Object.defineProperty将property转为getter/setter,Vue能在内部追踪依赖。
+- 每个Vue实例都对应一个Watcher实例，通过getter将这些property记录为依赖，当依赖项的setter触发时，会通知wather,从而使关联组件重新渲染
 
 - Vue检测对象和数组
 ```js

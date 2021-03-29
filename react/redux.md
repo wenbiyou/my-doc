@@ -1,3 +1,32 @@
+Action
+  - dispatch()
+  - action函数
+
+reducer(state, action)
+  - reducer是一个纯函数，仅用于计算下一个state,是完全可以预测的
+  - reducer拆分
+  - combineReducer() 将多个子reduer合并成根reducer
+store
+  - 维持应用的state
+  - 提供getState() 获取state
+  - 提供dispatch(action) 更改state
+  - 通过subscribe(listener) 注册一个监听函数
+  - 通过subscribe(listener) 返回的函数注销监听器
+  - Redux应用只有一个单一的store
+Usage with React
+  - 展示组件
+    - propTypes
+    - props => 属性和方法
+  - 容器组件
+    - 容器组件把展示组件连接到Redux
+    - 技术上，容器组件通过store.subscribe()监听器把Redux状态树的部分状态通过 props 传递给要渲染的组件
+    - connect()(展示组件)  connect自身带有react的性能优化，建议使用connect
+  - 其他组件
+  - 传入Store
+    - <Provider store={store}></Provider>
+
+-----
+
 ## Flux架构
 View
 Action
